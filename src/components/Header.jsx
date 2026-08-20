@@ -2,6 +2,7 @@ import DisneyPlus from "./../assets/images/DisneyPlusLogo.svg";
 import { HiPlus, HiOutlineDotsVertical, HiStar, HiHome } from "react-icons/hi";
 import { HiMagnifyingGlass, HiPlayCircle, HiTv } from "react-icons/hi2";
 import HeaderItem from "./HeaderItem";
+import { useState } from "react";
 
 const Header = () => {
   const menu = [
@@ -31,12 +32,42 @@ const Header = () => {
     },
   ];
 
+  const [showOptions, setShowOptions] = useState(false);
+
   return (
-    <div>
-      <img src={DisneyPlus} className="w-20 md:w-37.5 object-cover" />
-      {menu.map((item) => (
-        <HeaderItem name={item.name} Icon={item.icon} />
-      ))}
+    <div className="flex items-center justify-between">
+      <div className="flex items-center gap-10">
+        <img src={DisneyPlus} className="w-18 md:w-20 object-cover" />
+
+        <div className="hidden md:flex gap-8">
+          {menu.map((item) => (
+            <HeaderItem name={item.name} Icon={item.icon} />
+          ))}
+        </div>
+
+        <div className="md:hidden flex gap-8">
+          {menu.map(
+            (item, index) =>
+              index < 3 && <HeaderItem name={""} Icon={item.icon} />,
+          )}
+        </div>
+
+        <div className="md:hidden" onClick={() => {setShowOptions(!showOptions)}}>
+          <HeaderItem Icon={HiOutlineDotsVertical}/>
+          {showOptions && <div className="absolute mt-3 px-5 py-4 bg-white border border-gray-400 shadow-xl/35 rounded-lg">
+            {menu.map(
+              (item, index) =>
+                index > 2 && <HeaderItem name={item.name} Icon={item.icon} />,
+            )}
+          </div>}
+        </div>
+      </div>
+
+      <img
+        src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
+        className="w-10 rounded-full"
+        alt=""
+      />
     </div>
   );
 };
