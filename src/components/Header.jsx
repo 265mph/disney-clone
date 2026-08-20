@@ -54,7 +54,7 @@ const Header = () => {
 
         <div className="md:hidden" onClick={() => {setShowOptions(!showOptions)}}>
           <HeaderItem Icon={HiOutlineDotsVertical}/>
-          {showOptions && <div className="absolute mt-3 px-5 py-4 bg-white border border-gray-400 shadow-xl/35 rounded-lg">
+          {showOptions && <div className="absolute mt-3 px-5 py-4 bg-white border border-gray-400 shadow-xl/35 rounded-lg z-10">
             {menu.map(
               (item, index) =>
                 index > 2 && <HeaderItem name={item.name} Icon={item.icon} />,
