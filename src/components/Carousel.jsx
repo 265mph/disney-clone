@@ -49,7 +49,7 @@ const Carousel = () => {
             key={item.id}
             src={IMAGE_BASE_URL + item.backdrop_path}
             alt=""
-            className="min-w-[90%] md:min-w-[90%] md:h-150 object-cover object-top mr-5 rounded-2xl snap-center shadow-md shadow-gray-600 hover:border-4 border-blue-800 transition-all duration-200"
+            className="min-w-full md:min-w-full md:h-150 object-cover object-top mr-5 rounded-lg snap-center shadow-lg shadow-gray-700 hover:border-4 border-[#3e4cef] transition-all duration-200"
           />
         ))}
       </div>
