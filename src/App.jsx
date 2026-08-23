@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Carousel from "./components/Carousel";
 import ProductionHouse from "./components/ProductionHouse";
+import MovieGenreList from "./components/MovieGenreList";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Carousel />
       <ProductionHouse />
+      <MovieGenreList />
     </div>
   );
 }

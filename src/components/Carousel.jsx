@@ -15,7 +15,6 @@ const Carousel = () => {
 
   const getTrendingMovies = () => {
     GlobalApi.getTrendingMovies.then((res) => {
-      console.log(res.data.results);
       setTrendingMovieList(res.data.results);
     });
   };
