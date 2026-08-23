@@ -1,4 +1,4 @@
-import DisneyPlus from "./../assets/images/DisneyPlusLogo.svg";
+import DisneyPlus from "./../assets/images/DisneyPluslogo.svg";
 import { HiPlus, HiOutlineDotsVertical, HiStar, HiHome } from "react-icons/hi";
 import { HiMagnifyingGlass, HiPlayCircle, HiTv } from "react-icons/hi2";
 import HeaderItem from "./HeaderItem";
