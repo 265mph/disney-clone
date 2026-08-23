@@ -7,7 +7,7 @@ import MovieGenreList from "./components/MovieGenreList";
 
 function App() {
   return (
-    <div className="px-8 py-5">
+    <div className="md:px-8 py-5">
       <Header />
       <Carousel />
       <ProductionHouse />
