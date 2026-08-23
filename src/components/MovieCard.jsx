@@ -6,7 +6,7 @@ const MovieCard = ({ movie }) => {
     <>
       <img
         src={IMAGE_BASE_URL + movie.poster_path}
-        className="w-27.5 md:w-50 rounded-lg cursor-pointer shadow-lg shadow-gray-700 hover:border-4 border-[#3e4cef] transition-all duration-200"
+        className="w-27.5 md:w-50 rounded-lg cursor-pointer hover:border-4 border-[#3e4cef] transition-all duration-200"
       />
     </>
   );

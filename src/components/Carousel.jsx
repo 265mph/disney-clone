@@ -40,7 +40,7 @@ const Carousel = () => {
       />
 
       <div
-        className="flex overflow-x-auto w-full px-[5%] py-4 scrollbar-none scroll-smooth snap-x snap-mandatory"
+        className="flex overflow-x-auto scroll-bar-none w-full px-[5%] py-4 scrollbar-none scroll-smooth snap-x snap-mandatory"
         ref={elementRef}
       >
         {trendingMovieList.map((item, index) => (
